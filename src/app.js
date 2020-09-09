@@ -9,7 +9,6 @@ class App extends React.Component {
                     {name}
                     {name}
                     {name}
-                    {name}
                 </h1>
             </div>
         );
