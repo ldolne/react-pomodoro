@@ -5,7 +5,11 @@ class App extends React.Component {
         const {name} = this.props;
         return (
             <div className={"App"}>
-                <h1>{name}</h1>
+                <h1>
+                    {name}
+                    {name}
+                    {name}
+                </h1>
             </div>
         );
     }
