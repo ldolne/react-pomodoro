@@ -24,6 +24,8 @@
     "@babel/preset-react": "^7.10.4",
     "@becode/eslint-config": "^0.10.0",
     "babel-eslint": "^10.1.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
     "eslint": "^7.8.1",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
@@ -35,8 +37,10 @@
     "prettier": "^2.1.1"
   },
   "dependencies": {
+    "node-sass": "^4.14.1",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "scss": "^0.2.4"
   },
   "lint-staged": {
     "*.json": [
