@@ -1,4 +1,5 @@
 import React from "react";
+import Pomodoro from "./component/pomodoro";
 
 class App extends React.Component {
     render() {
@@ -6,6 +7,8 @@ class App extends React.Component {
         return (
             <div className={"App"}>
                 <h1>
+                    <Pomodoro />
+                    {name}
                     {name}
                     {name}
                     {name}
