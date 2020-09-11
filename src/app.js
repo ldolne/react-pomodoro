@@ -1,7 +1,21 @@
 import React from "react";
-import Pomodoro from "./component/pomodoro";
+import Header from "./components/header";
+import Main from "./components/main";
+import Footer from "./components/footer";
+import Pomodoro from "./components/pomodoro";
 
-class App extends React.Component {
+function App() {
+    return (
+        <div>
+            <Header />
+            <Main />
+            <Footer />
+            <Pomodoro />
+        </div>
+    );
+}
+
+/*class App extends React.Component {
     render() {
         const {name} = this.props;
         return (
@@ -9,13 +23,10 @@ class App extends React.Component {
                 <h1>
                     <Pomodoro />
                     {name}
-                    {name}
-                    {name}
-                    {name}
                 </h1>
             </div>
         );
     }
-}
+}*/
 
 export default App;
