@@ -1,7 +1,7 @@
 import React from "react";
 import Pomodoro from "./pomodoro";
 
-function Main() {
+function MainContent() {
     return (
         <main>
             <Pomodoro />
@@ -9,4 +9,4 @@ function Main() {
     );
 }
 
-export default Main;
+export default MainContent;

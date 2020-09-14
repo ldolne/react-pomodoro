@@ -4,4 +4,4 @@ import App from "./app";
 import "./scss/app.scss";
 
 const mountNode = document.querySelector("#app");
-ReactDOM.render(<App name={"Laëtitia"} />, mountNode);
+ReactDOM.render(<App />, mountNode);
