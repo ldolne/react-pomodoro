@@ -4,7 +4,9 @@
 body {
   margin: 0;
   max-width: 100vw;
+  min-width: 20vw;
   max-height: 100vh;
+  min-height: 20vh;
   position: relative;
   background-color: #E7DACB;
   color: #E7DACB;
@@ -20,7 +22,7 @@ body {
   padding: 0;
   background: #21374B;
   color: #E7DACB;
-  border-bottom: solid 5px #E7DACB;
+  z-index: 10;
 
   &__title {
     margin: 0;
@@ -45,16 +47,19 @@ body {
 }
 
 .pomodoro {
-  max-width: 65%;
-  height: 30%;
-  margin: auto;
+  max-width: 30%;
+  min-height: 175px;
+  max-height: 30%;
+  position: relative;
+  top: 25vh;
+  margin: 2% auto;
   padding: 2% 10%;
   border-radius: 50px;
   background: #21374B;
   box-shadow:  10px 10px 40px #1c2f40;
 
-  &__timer.clock {
-    margin: 5% 5% 15% 5%;
+  &__timer__clock {
+    margin: 5%;
     padding: 2%;
     font-size: 5rem;
     border-radius: 50px;
@@ -66,49 +71,181 @@ body {
   &__buttons {
     display: flex;
     flex-flow: row wrap;
+    margin: 10% 0 5% 0;
+
+    &__button {
+      display: block;
+      height: auto;
+      margin: 2% 5%;
+      padding: 4%;
+      flex: 1;
+      font-size: 1.5rem;
+      color: #E7DACB;
+      text-align: center;
+      border-radius: 50px;
+      border-color: #c9d3d9;
+      background: #21374B;
+      box-shadow:  20px 20px 60px #1c2f40,
+      -20px -20px 60px #263f56;
+    }
   }
-
-  &__buttons.button {
-    display: block;
-    margin: 0 5%;
-    padding: 2%;
-    flex: 1;
-    color: #E7DACB;
-    text-align: center;
-    border-radius: 50px;
-    border-color: #c9d3d9;
-    background: #21374B;
-    box-shadow:  20px 20px 60px #1c2f40,
-    -20px -20px 60px #263f56;
-  }
-
-
 }
 
 .modal {
   position: fixed;
   top: 0;
   left: 0;
-  width:100%;
+  width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
+
+  &__main {
+    position: fixed;
+    max-width: 80%;
+    min-width: 50%;
+    max-height: 40%;
+    min-height: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2%;
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+    background: #21374B;
+    border-radius: 50px;
+    overflow: auto;
+
+    &__title {
+      flex: 1;
+      font-size: 4rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    &__text {
+      position: relative;
+      flex: 1;
+      margin: 1%;
+      padding: 1%;
+      font-size: 1.5rem;
+    }
+
+    &__buttons {
+      position: relative;
+      display: flex;
+      flex: 1;
+      flex-flow: row wrap;
+      margin: 1% auto;
+      padding: 1%;
+
+      &__button {
+        flex: 1;
+        max-width: 300px;
+        margin: 1% 3%;
+        padding: 3%;
+        font-size: 1.2rem;
+        color: #E7DACB;
+        text-align: center;
+        border-radius: 50px;
+        border-color: #c9d3d9;
+        background: #21374B;
+        box-shadow: 20px 20px 60px #1c2f40,
+        -20px -20px 60px #263f56;
+      }
+    }
+  }
+
+  &.display-block {
+    display: block;
+  }
+
+  &.display-none {
+    display: none;
+  }
 }
 
-.modal-main {
-  position:fixed;
-  background: white;
-  width: 80%;
-  height: auto;
-  top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);
+// MEDIA QUERIES
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 768px) {
+  .pomodoro {
+    box-shadow: 2px 2px 20px #1c2f40;
+
+    &__timer__clock {
+      font-size: 2rem;
+      box-shadow: 2px 2px 20px #1c2f40,
+      -2px -2px 20px #263f56;
+    }
+
+    &__buttons {
+      &__button {
+        font-size: 1rem;
+        box-shadow: 2px 2px 20px #1c2f40,
+        -2px -2px 20px #263f56;
+      }
+    }
+  }
+
+  .modal {
+    &__main {
+      &__title {
+        font-size: 2rem;
+      }
+      &__text {
+        font-size: 1rem;
+      }
+      &__buttons {
+        &__button {
+          font-size: 0.8rem;
+          box-shadow: 2px 2px 20px #1c2f40,
+          -2px -2px 20px #263f56;
+        }
+      }
+    }
+  }
 }
 
-.display-block {
-  display: block;
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .pomodoro {
+    box-shadow:  5px 5px 30px #1c2f40;
+
+    &__timer__clock {
+      font-size: 3rem;
+      box-shadow:  5px 5px 30px #1c2f40,
+      -5px -5px 30px #263f56;
+    }
+
+    &__buttons {
+      &__button {
+        font-size: 1.5rem;
+        box-shadow:  5px 5px 30px #1c2f40,
+        -5px -5px 30px #263f56;
+      }
+    }
+  }
+
+  .modal {
+    &__main {
+      &__title {
+        font-size: 3rem;
+      }
+      &__text {
+        font-size: 1.3rem;
+      }
+      &__buttons {
+        &__button {
+          font-size: 1rem;
+          box-shadow: 2px 2px 20px #1c2f40,
+          -2px -2px 20px #263f56;
+        }
+      }
+    }
+  }
 }
 
-.display-none {
-  display: none;
-}
+
+
+
+
 

@@ -4,7 +4,7 @@ function TimerButton(props) {
     return (
         <button
             type={"button"}
-            className={"pomodoro__buttons button"}
+            className={"pomodoro__buttons__button"}
             onClick={props.handleClick}>
             {props.name}
         </button>

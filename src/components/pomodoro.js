@@ -21,19 +21,16 @@ function Pomodoro(props) {
     // Modal
     function openModal() {
         setIsModalShowing(true);
-        console.log("Show modal!");
     }
 
     function closeModal() {
         setIsModalShowing(false);
-        console.log("Hide modal!");
     }
 
     // Buttons functions
     function addMinute() {
         if (isActive === false && timer < 3540) {
             setTimer(prevTimer => prevTimer + 60);
-            console.log("Plus!");
         }
     }
 
@@ -46,31 +43,26 @@ function Pomodoro(props) {
                 }
                 return newTimer;
             });
-            console.log("Minus!");
         }
     }
 
     function startTimer() {
         setIsActive(true);
-        console.log("startTimer");
     }
 
     function pauseTimer() {
         setIsActive(false);
-        console.log("pauseTimer");
     }
 
     function resetTimer() {
         setIsActive(false);
         setTimer(props.workingSession);
-        console.log("resetTimer");
     }
 
-    function restartTimer() {
+    function handleRestartTimer() {
         closeModal();
         resetTimer();
         setIsActive(true);
-        console.log("restartTimer");
     }
 
     // Lifecycle methods
@@ -95,25 +87,24 @@ function Pomodoro(props) {
     // Components rendering
     return (
         <div className={"pomodoro"}>
-            <Timer
-                displayTimer={displayTimer}
-            />
+            <Timer displayTimer={displayTimer} />
             <div className={"pomodoro__buttons"}>
-                {!isActive && (<TimerButton name={"+"} handleClick={addMinute} />)}
+                {!isActive && (
+                    <TimerButton name={"+"} handleClick={addMinute} />
+                )}
                 <TimerButton
                     name={isActive ? "Pause" : "Start"}
                     handleClick={isActive ? pauseTimer : startTimer}
                 />
-                <TimerButton
-                    name={"Reset"}
-                    handleClick={resetTimer}
-                />
-                {!isActive && (<TimerButton name={"-"} handleClick={substractMinute} />)}
+                <TimerButton name={"Reset"} handleClick={resetTimer} />
+                {!isActive && (
+                    <TimerButton name={"-"} handleClick={substractMinute} />
+                )}
             </div>
             <Modal
                 showModal={isModalShowing}
                 handleClose={closeModal}
-                restartTimer={restartTimer}
+                restartTimer={handleRestartTimer}
             />
         </div>
     );
