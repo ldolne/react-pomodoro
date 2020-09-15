@@ -2,9 +2,8 @@ import React from "react";
 
 function Timer(props) {
     return (
-        <div>
-            <h1>{"Timer"}</h1>
-            <p>Hello</p>
+        <div className={"pomodoro__timer"}>
+            <p className={"pomodoro__timer clock"}>{props.displayTimer()}</p>
         </div>
     );
 }

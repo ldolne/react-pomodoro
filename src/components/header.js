@@ -2,9 +2,8 @@ import React from "react";
 
 function Header() {
     return (
-        <header className={"navbar"}>
-            <h1>{"Pomodoro"}</h1>
-            <p>{"This is my Pomodoro."}</p>
+        <header className={"header"}>
+            <h1 className={"header__title"}>{"Pomodoro"}</h1>
         </header>
     );
 }

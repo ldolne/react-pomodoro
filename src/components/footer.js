@@ -2,8 +2,8 @@ import React from "react";
 
 function Footer() {
     return (
-        <footer>
-            <p>{"Copyright Laëtitia - 2020"}</p>
+        <footer className={"footer"}>
+            <p className={"footer__copyright"}>{"Laëtitia Dolne - September 2020 - @BeCode Liège - Bootcamp in web development"}</p>
         </footer>
     );
 }

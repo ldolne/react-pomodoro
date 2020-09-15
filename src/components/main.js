@@ -3,7 +3,7 @@ import Pomodoro from "./pomodoro";
 
 function MainContent() {
     return (
-        <main>
+        <main className={"main"}>
             <Pomodoro />
         </main>
     );
