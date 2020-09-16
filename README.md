@@ -1,31 +1,18 @@
-# empty-project
+# React-Pomodoro
 
-Empty project.
+## Presentation
+This is a solo project done during my bootcamp training in web development @ BeCode Liège.
 
-## Building and running on localhost
+The goal was to discover React by building a pomodoro with basic functionalities: 
+a timer, a "+" button to add minutes, a "-" button to substract minutes, a "Start"
+button to launch and pause the timer and a "Reset" button to reset the time.
 
-First install dependencies:
+We had one week to complete the project.
 
-```sh
-npm install
-```
+## Link
+Here's the link to my project on Netlify: [React Pomodoro](https://ldolne-react-pomodoro.netlify.app/ "React Pomodoro")
 
-To run in hot module reloading mode:
-
-```sh
-npm start
-```
-
-To create a production build:
-
-```sh
-npm run build-prod
-```
-
-## Running
-
-Open the file `dist/index.html` in your browser
-
-## Credits
-
-Made with [createapp.dev](https://createapp.dev/)
+## Resources & Credits
+- The project's structure was created with [createapp.dev](https://createapp.dev/ "createapp.dev").
+- For the font and the icons, I used respectively Google Fonts and Font Awesome. 
+- [Michael Marino](https://github.com/MmarinoM "Michael Marino") helped me with the code and the design.
