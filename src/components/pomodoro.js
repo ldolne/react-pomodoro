@@ -86,19 +86,37 @@ function Pomodoro(props) {
 
     // Components rendering
     return (
-        <div className={"pomodoro"}>
+        <div
+            className={
+                "pomodoro animate__animated animate__fadeIn animate__slow"
+            }>
             <Timer displayTimer={displayTimer} />
             <div className={"pomodoro__buttons"}>
                 {!isActive && (
-                    <TimerButton name={"+"} handleClick={addMinute} />
+                    <TimerButton
+                        name={<i className={"fas fa-plus fa-2x"} />}
+                        handleClick={addMinute}
+                    />
                 )}
                 <TimerButton
-                    name={isActive ? "Pause" : "Start"}
+                    name={
+                        isActive ? (
+                            <i className={"fas fa-pause fa-2x"} />
+                        ) : (
+                            <i className={"fas fa-play fa-2x"} />
+                        )
+                    }
                     handleClick={isActive ? pauseTimer : startTimer}
                 />
-                <TimerButton name={"Reset"} handleClick={resetTimer} />
+                <TimerButton
+                    name={<i className={"fas fa-undo-alt fa-2x"} />}
+                    handleClick={resetTimer}
+                />
                 {!isActive && (
-                    <TimerButton name={"-"} handleClick={substractMinute} />
+                    <TimerButton
+                        name={<i className={"fas fa-minus fa-2x"} />}
+                        handleClick={substractMinute}
+                    />
                 )}
             </div>
             <Modal
@@ -112,7 +130,7 @@ function Pomodoro(props) {
 
 Pomodoro.defaultProps = {
     //in seconds
-    workingSession: 1500,
+    workingSession: 1,
 };
 
 export default Pomodoro;
