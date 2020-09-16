@@ -130,7 +130,7 @@ function Pomodoro(props) {
 
 Pomodoro.defaultProps = {
     //in seconds
-    workingSession: 1,
+    workingSession: 1500,
 };
 
 export default Pomodoro;
