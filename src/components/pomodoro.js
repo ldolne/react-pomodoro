@@ -11,7 +11,7 @@ function Pomodoro(props) {
     // Timer functions
     function displayTimer() {
         const seconds = timer % 60;
-        const minutes = parseInt(timer / 60);
+        const minutes = Math.floor(timer / 60);
         function addLeadingZeroes(time) {
             return time < 10 ? `0${time}` : time;
         }
