@@ -5,6 +5,7 @@ dist/*
 node_modules/
 *.log
 .eslintcache
+.idea
 
 # OS generated files
 .DS_Store
